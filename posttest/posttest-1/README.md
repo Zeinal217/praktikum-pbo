@@ -38,27 +38,27 @@ Sistem Manajemen Laundry "CleanWash" adalah aplikasi berbasis teks yang dirancan
 
 2. Panduan Menjalankan Program
 
-  1. Pastikan Python versi 3.x telah terinstal di sistem.
-  2. Unduh atau 'clone' repositori ini ke komputer.
-  3. Buka terminal, lalu arahkan ke direktori proyek.
-  4. Jalankan perintah "python main.py" berikut untuk mengeksekusi program beserta skenario pengujiannya 
+  - 1. Pastikan Python versi 3.x telah terinstal di sistem.
+  - 2. Unduh atau 'clone' repositori ini ke komputer.
+  - 3. Buka terminal, lalu arahkan ke direktori proyek.
+  - 4. Jalankan perintah "python main.py" berikut untuk mengeksekusi program beserta skenario pengujiannya 
 
 3. Panduan Pengujian Program
   A. Pengujian Instansiasi Objek & Class Method
-    Membuat minimal 2 objek untuk setiap class (layanan1 & layanan2, pelanggan1 & pelanggan2, trans1 & trans2).
-    Pengujian pembentukan objek layanan menggunakan factory method LayananLaundry.dari_dict().
-    Mengubah atribut kelas diskon member global via Pelanggan.ubah_diskon_member(0.15) dan melacak penghitung transaksi via Transaksi.total_transaksi.
+    - Membuat minimal 2 objek untuk setiap class (layanan1 & layanan2, pelanggan1 & pelanggan2, trans1 & trans2).
+    - Pengujian pembentukan objek layanan menggunakan factory method LayananLaundry.dari_dict().
+    - Mengubah atribut kelas diskon member global via Pelanggan.ubah_diskon_member(0.15) dan melacak penghitung transaksi via Transaksi.total_transaksi.
   B. Pengujian Eksekusi Method
-    Panggilan static method Pelanggan.validasi_no_telp() untuk memeriksa nomor telepon valid (081234567890) dan invalid (123-abc).
-    Panggilan static method LayananLaundry.hitung_estimasi_selesai() untuk estimasi tanggal selesai.
-    Panggilan instance method info_layanan(), proses_pembayaran_saldo(), tambah_saldo(), bayar_tunai(), serta cetak_nota().
+    - Panggilan static method Pelanggan.validasi_no_telp() untuk memeriksa nomor telepon valid (081234567890) dan invalid (123-abc).
+    - Panggilan static method LayananLaundry.hitung_estimasi_selesai() untuk estimasi tanggal selesai.
+    - Panggilan instance method info_layanan(), proses_pembayaran_saldo(), tambah_saldo(), bayar_tunai(), serta cetak_nota().
   C. Pengujian Setter
-    LayananLaundry.tarif_per_kg:
-      Data Valid (8500): Berhasil memperbarui tarif layanan.
-      Data Invalid (-5000): Memicu ValueError ("Tarif per kg harus berupa angka positif lebih dari 0!").
-    Pelanggan.saldo:
-      Data Valid (100000): Berhasil memperbarui saldo deposit.
-      Data Invalid (-20000): Memicu ValueError ("Saldo deposit tidak boleh bernilai negatif!").
-    Transaksi.berat_kg:
-      Data Valid (5.5): Berhasil memperbarui berat cucian dan mengakulasi ulang total harga.
-      Data Invalid (0): Memicu ValueError ("Berat cucian harus berupa angka positif dan lebih dari 0 kg!").
+    - LayananLaundry.tarif_per_kg:
+      - Data Valid (8500): Berhasil memperbarui tarif layanan.
+      - Data Invalid (-5000): Memicu ValueError ("Tarif per kg harus berupa angka positif lebih dari 0!").
+    - Pelanggan.saldo:
+      - Data Valid (100000): Berhasil memperbarui saldo deposit.
+      - Data Invalid (-20000): Memicu ValueError ("Saldo deposit tidak boleh bernilai negatif!").
+    - Transaksi.berat_kg:
+      - Data Valid (5.5): Berhasil memperbarui berat cucian dan mengakulasi ulang total harga.
+      - Data Invalid (0): Memicu ValueError ("Berat cucian harus berupa angka positif dan lebih dari 0 kg!").
