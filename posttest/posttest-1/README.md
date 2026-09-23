@@ -44,15 +44,15 @@ Sistem Manajemen Laundry "CleanWash" adalah aplikasi berbasis teks yang dirancan
   - 4. Jalankan perintah "python main.py" berikut untuk mengeksekusi program beserta skenario pengujiannya 
 
 3. Panduan Pengujian Program
-  A. Pengujian Instansiasi Objek & Class Method
+  - A. Pengujian Instansiasi Objek & Class Method
     - Membuat minimal 2 objek untuk setiap class (layanan1 & layanan2, pelanggan1 & pelanggan2, trans1 & trans2).
     - Pengujian pembentukan objek layanan menggunakan factory method LayananLaundry.dari_dict().
     - Mengubah atribut kelas diskon member global via Pelanggan.ubah_diskon_member(0.15) dan melacak penghitung transaksi via Transaksi.total_transaksi.
-  B. Pengujian Eksekusi Method
+  - B. Pengujian Eksekusi Method
     - Panggilan static method Pelanggan.validasi_no_telp() untuk memeriksa nomor telepon valid (081234567890) dan invalid (123-abc).
     - Panggilan static method LayananLaundry.hitung_estimasi_selesai() untuk estimasi tanggal selesai.
     - Panggilan instance method info_layanan(), proses_pembayaran_saldo(), tambah_saldo(), bayar_tunai(), serta cetak_nota().
-  C. Pengujian Setter
+  - C. Pengujian Setter
     - LayananLaundry.tarif_per_kg:
       - Data Valid (8500): Berhasil memperbarui tarif layanan.
       - Data Invalid (-5000): Memicu ValueError ("Tarif per kg harus berupa angka positif lebih dari 0!").
