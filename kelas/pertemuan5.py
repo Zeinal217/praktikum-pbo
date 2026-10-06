@@ -24,6 +24,12 @@
 # print(kucing.warna_bulu)
 # print(ular_cobra.berbisa)
 
+class Karyawan:
+    def __init__(self, nama, nip, posisi):
+        self.nama = nama
+        self.nip = nip
+        self.posisi = posisi
+
 class Teller(Karyawan):
     def __init__(self, nama, nip):
         super().__init__(nama, nip, "Teller")
